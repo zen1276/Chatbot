@@ -18,14 +18,30 @@ public class ChatbotController
 	
 	ChatModel simplebot = new ChatModel();
 	
+	//getters
+	public String getSimpleBot
+	{
+		return simpleBot;
+	}
+	
+	
+	
+	//setters
+	
+	private Chatbot simpleBot;
+	
 	public ChatbotController()
 	{
-		
+		simpleBot = new Chatbot();
 	}
 	
-	public String interactWithChatbot()
+	public String interactWithChatbot(String text)
 	{
 		
 	}
 	
+	public String useChatbotCheckers(String text)
+	{
+		
+	}
 }
