@@ -38,6 +38,14 @@ public class ChatModel
 		responseList.add("Well you are a robot, so it doesn't matter what you say, because everything you say is put into a list, then randomly selected to be outputted.");
 		responseList.add("Why do you keep talking about random things?");
 		
+		spookyList.add("Trick or Treat all up in this bizzness.");
+		spookyList.add("Childhood obesity.");
+		spookyList.add("The teen suicide rates are rising at an alarmingly rate.");
+		spookyList.add("The polar bears are dying. The ice caps are melting.");
+		spookyList.add("Many children will be dressing up as Fortnite characters for Halloween.");
+		spookyList.add("When filming the \"heroic\" scene in a dog's purpose, they forced the scared dog into the raging water.");
+		spookyList.add("There are actually people in the world who believe the Earth is flat.");
+		spookyList.add("Some people don't get their children vaccined out of fear of it being harmful to the child.");
 	}
 	
 	private String currentUser()
