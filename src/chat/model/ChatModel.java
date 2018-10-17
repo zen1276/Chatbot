@@ -48,6 +48,7 @@ public class ChatModel
 		spookyList.add("Some people don't get their children vaccined out of fear of it being harmful to the child.");
 	}
 	
+	
 	private String currentUser()
 	{
 		
