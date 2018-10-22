@@ -1,9 +1,9 @@
 package chat.controller;
 
 import javax.swing.JOptionPane;
-import chat.model.ChatModel;
+import chat.model.Chatbot;
 
-public class ChatbotController
+public class ChatController
 {
 	
 	public void start()
@@ -19,19 +19,9 @@ public class ChatbotController
 	
 	ChatModel simplebot = new ChatModel();
 	
-	//getters
-	public String getSimpleBot
-	{
-		return simpleBot;
-	}
-	
-	
-	
-	//setters
-	
 	private Chatbot simpleBot;
 	
-	public ChatbotController()
+	public ChatController()
 	{
 		simpleBot = new Chatbot();
 	}
@@ -52,8 +42,10 @@ public class ChatbotController
 		return output;
 	}
 	
-	public String useChatbotCheckers(String text)
+	public boolean useChatbotCheckers(String text)
 	{
 		
 	}
+
+	
 }

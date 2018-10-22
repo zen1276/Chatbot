@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class ChatModel
+public class Chatbot
 {
 	ArrayList<String> responseList = new ArrayList();
 	ArrayList<String> spookyList = new ArrayList();
@@ -38,6 +38,7 @@ public class ChatModel
 		responseList.add("Well you are a robot, so it doesn't matter what you say, because everything you say is put into a list, then randomly selected to be outputted.");
 		responseList.add("Why do you keep talking about random things?");
 		
+		spookyList.add("Halloween");
 		spookyList.add("Trick or Treat all up in this bizzness.");
 		spookyList.add("Childhood obesity.");
 		spookyList.add("The teen suicide rates are rising at an alarmingly rate.");
@@ -67,10 +68,29 @@ public class ChatModel
 		
 	}
 	
-	//setters
-	
 	//getters
 	
+	public ArrayList<String> getResponseList()
+	{
+		return responseList;
+	}
+	
+	public ArrayList<String> getSpookyList()
+	{
+		return spookyList;
+	}
+	
+	//setters
+	
+	public void setResponseList(ArrayList<String> responses)
+	{
+		this.responseList = responses;
+	}
+	
+	public void setSpookyList(ArrayList<String> spookyStuff)
+	{
+		this.spookyList = spookyStuff;
+	}
 	
 	public String toString()
 	{
