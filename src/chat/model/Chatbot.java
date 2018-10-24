@@ -13,7 +13,6 @@ public class Chatbot
 	private String content;
 	
 	
-	
 	public Chatbot()
 	{
 		this.joke = "Ligma";
@@ -63,12 +62,43 @@ public class Chatbot
 		response = JOptionPane.showInputDialog(null, "                ");
 		response = JOptionPane.showInputDialog(null, "The fitness gram pacer test is a multi-staged aerobic exercise.");
 		response = JOptionPane.showInputDialog(null, "Your MOMMMM");
+	}
+	
+	public boolean legitimacyChecker(String input)
+	{
+		boolean isValid = true;
+		if (input == null)
+		{
+			isValid = false;
+		}
+		else if (input.length() <2)
+		{
+			isValid = false;
+		}
+		else if (input.contains("dfg") || input.contains("kl;") || input.contains("cvb"))
+		{
+			isValid = false;
+		}
 		
-		
+		return isValid;
+	}
+	
+	public boolean spookyChecker()
+	{
 		
 	}
 	
-	//getters
+	public boolean contentChecker()
+	{
+		
+	}
+	
+	public String processText()
+	{
+		
+	}
+	
+	//---------------------getters
 	
 	public ArrayList<String> getResponseList()
 	{
@@ -79,8 +109,9 @@ public class Chatbot
 	{
 		return spookyList;
 	}
+	//----------end getters
 	
-	//setters
+	//-------------------------setters
 	
 	public void setResponseList(ArrayList<String> responses)
 	{
@@ -92,6 +123,7 @@ public class Chatbot
 		this.spookyList = spookyStuff;
 	}
 	
+	//------------end setters
 	public String toString()
 	{
 		
