@@ -99,10 +99,19 @@ public class Chatbot
 		{
 			hasContent = true;
 		}
-		else if(content == null)
+		else if(text.contains(" "+content+" "))
 		{
-			
+			hasContent = true;
 		}
+		else if(text.contains(" "+content))
+		{
+			hasContent = true;
+		}
+		else if(text.contains(content+" "))
+		{
+			hasContent = true;
+		}
+		
 		
 		return hasContent;
 	}
@@ -138,6 +147,12 @@ public class Chatbot
 	{
 		return content;
 	}
+	
+//	public ArrayList<String> getNeutralSentiments()
+//	{
+//		return neutralSentiments;
+//	}
+	
 	
 	//----------end getters
 	
