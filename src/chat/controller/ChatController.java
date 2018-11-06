@@ -17,7 +17,7 @@ public class ChatController
 		
 	}
 	
-	ChatModel simplebot = new ChatModel();
+	Chatbot simplebot = new Chatbot();
 	
 	private Chatbot simpleBot;
 	

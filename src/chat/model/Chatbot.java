@@ -85,17 +85,41 @@ public class Chatbot
 	
 	public boolean spookyChecker()
 	{
+		boolean isSpooky = false;
 		
+		
+		return isSpooky;
 	}
 	
-	public boolean contentChecker()
+	public boolean contentChecker(String text)
 	{
+		boolean hasContent = false;
 		
+		if(text.equals(content))
+		{
+			hasContent = true;
+		}
+		else if(content == null)
+		{
+			
+		}
+		
+		return hasContent;
 	}
 	
-	public String processText()
+	public String processText(String userText)
 	{
+		String answer = "";
 		
+		answer += "You said: " + userText;
+		if (contentChecker(userText))
+		{
+			answer += "You said the special words.\n";
+		}
+		
+		
+		
+		return answer;
 	}
 	
 	//---------------------getters
@@ -109,6 +133,12 @@ public class Chatbot
 	{
 		return spookyList;
 	}
+	
+	public String getContent()
+	{
+		return content;
+	}
+	
 	//----------end getters
 	
 	//-------------------------setters
@@ -121,6 +151,11 @@ public class Chatbot
 	public void setSpookyList(ArrayList<String> spookyStuff)
 	{
 		this.spookyList = spookyStuff;
+	}
+	
+	public void setContent(String contentStuff)
+	{
+		this.content = contentStuff;
 	}
 	
 	//------------end setters
