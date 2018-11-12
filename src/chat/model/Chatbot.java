@@ -52,6 +52,7 @@ public class Chatbot
 	private String currentUser()
 	{
 		
+		return null;
 	}
 	
 	private String jokeList()
@@ -62,6 +63,8 @@ public class Chatbot
 		response = JOptionPane.showInputDialog(null, "                ");
 		response = JOptionPane.showInputDialog(null, "The fitness gram pacer test is a multi-staged aerobic exercise.");
 		response = JOptionPane.showInputDialog(null, "Your MOMMMM");
+	
+		return null;
 	}
 	
 	public boolean legitimacyChecker(String input)
@@ -177,5 +180,6 @@ public class Chatbot
 	public String toString()
 	{
 		
+		return null;
 	}
 }
