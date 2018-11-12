@@ -151,6 +151,12 @@ public class Chatbot
 		return content;
 	}
 	
+	public String getCurrentUser()
+	{
+		return currentUser;
+	}
+	
+	
 //	public ArrayList<String> getNeutralSentiments()
 //	{
 //		return neutralSentiments;
@@ -174,6 +180,11 @@ public class Chatbot
 	public void setContent(String contentStuff)
 	{
 		this.content = contentStuff;
+	}
+	
+	public void setCurrentUser(String currentUserDude)
+	{
+		this.currentUser = currentUserDude;
 	}
 	
 	//------------end setters
