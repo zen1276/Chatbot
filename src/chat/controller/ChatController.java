@@ -33,19 +33,16 @@ public class ChatController
 		return userSays;
 	}
 	
-	public String processText(String userText)
-	{
-		String output = "";
-		
-		output += "You said: " + userText;
-		
-		return output;
-	}
-	
-	public boolean useChatbotCheckers(String text)
-	{
-		
-	}
 
 	
+	public String useChatbotCheckers(String text)
+	{
+		
+		return null;
+	}
+
+	public Object getChatbot()
+	{
+		return null;
+	}
 }

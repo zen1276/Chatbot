@@ -11,6 +11,9 @@ public class Chatbot
 	private String joke;
 	private String currentUser;
 	private String content;
+	private String getContent;
+	private String contentChecker;
+	private String chatbotString;
 	
 	
 	public Chatbot()
@@ -27,7 +30,7 @@ public class Chatbot
 	
 	private void buildTheLists()
 	{
-		responseList.add("Ayy gurl, wassup.");
+		responseList.add("Hello! Ayy gurl, wassup.");
 		responseList.add("Peace out, I'll catch you on the flipside.");
 		responseList.add("Quit ignoring me.");
 		responseList.add("Are you a boy or a girl?");
@@ -36,6 +39,14 @@ public class Chatbot
 		responseList.add("Do you want to be my friend?");
 		responseList.add("Well you are a robot, so it doesn't matter what you say, because everything you say is put into a list, then randomly selected to be outputted.");
 		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		responseList.add("Why do you keep talking about random things?");
+		
 		
 		spookyList.add("Halloween");
 		spookyList.add("Trick or Treat all up in this bizzness.");
@@ -47,6 +58,50 @@ public class Chatbot
 		spookyList.add("There are actually people in the world who believe the Earth is flat.");
 		spookyList.add("Some people don't get their children vaccined out of fear of it being harmful to the child.");
 	}
+	
+	public boolean spookyChecker(String input)
+	{
+		boolean isSpooky = false;
+		
+		if (input.contains("Halloween"))
+		{
+			isSpooky = true;
+		}
+		
+		for (String phrase: spookyList)
+		{
+			if (input.contains(phrase))
+			{
+				isSpooky = true;
+			}
+		}
+			
+		return isSpooky;
+	}
+	
+	public String processText(String userText)
+	{
+		String answer = "";
+		
+		answer += "You said: " + userText;
+		if (contentChecker(userText))
+		{
+			answer = "";
+			answer += "Chatbot says: You said the special words.\n";
+		}
+		else if(answer == null)
+		{
+			answer += "Chatbot says: It appears we have received a null you dimwit...";
+		}
+		else
+		{
+			int randomIndex = (int) (Math.random() * responseList.size());
+			answer += "Chatbot says: " + responseList.get(randomIndex);
+		}
+		
+		return answer;
+	}
+	
 	
 	
 	private String currentUser()
@@ -86,19 +141,15 @@ public class Chatbot
 		return isValid;
 	}
 	
-	public boolean spookyChecker()
-	{
-		boolean isSpooky = false;
-		
-		
-		return isSpooky;
-	}
-	
 	public boolean contentChecker(String text)
 	{
 		boolean hasContent = false;
 		
-		if(text.equals(content))
+		if(text == null)
+		{
+			hasContent = false;
+		}
+		else if(text.equals(content))
 		{
 			hasContent = true;
 		}
@@ -114,25 +165,14 @@ public class Chatbot
 		{
 			hasContent = true;
 		}
-		
+		else
+		{
+			hasContent = false;
+		}
 		
 		return hasContent;
 	}
 	
-	public String processText(String userText)
-	{
-		String answer = "";
-		
-		answer += "You said: " + userText;
-		if (contentChecker(userText))
-		{
-			answer += "You said the special words.\n";
-		}
-		
-		
-		
-		return answer;
-	}
 	
 	//---------------------getters
 	
