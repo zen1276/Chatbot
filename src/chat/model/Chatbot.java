@@ -27,6 +27,17 @@ public class Chatbot
 		
 		buildTheLists();
 	}
+	public Chatbot(String string) {
+		this.joke = "Ligma";
+		this.currentUser = new String("default user -- which is boring");
+		this.content = new String("empty, but not null");
+		
+		this.responseList = new ArrayList<String>();
+		this.spookyList = new ArrayList<String>();
+		
+		buildTheLists();
+		content = "simple content";
+	}
 	
 	private void buildTheLists()
 	{
