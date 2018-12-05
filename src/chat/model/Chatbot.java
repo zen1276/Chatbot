@@ -94,7 +94,7 @@ public class Chatbot
 	{
 		String answer = "";
 		
-		answer += "You said: " + userText;
+		answer += "You said: " + userText + "\n";
 		if (contentChecker(userText))
 		{
 			answer = "";
@@ -102,10 +102,17 @@ public class Chatbot
 		}
 		else if(answer == null)
 		{
-			answer += "Chatbot says: It appears we have received a null you dimwit...";
+			answer += "Chatbot says: It appears we have received a null you dimwit...\n";
 		}
 		else
 		{
+			answer += "You said: " + userText + "\n";
+			
+			if (contentChecker(userText))
+			{
+				answer += "You said the special words.\n";
+			}
+			
 			int randomIndex = (int) (Math.random() * responseList.size());
 			answer += "Chatbot says: " + responseList.get(randomIndex);
 		}

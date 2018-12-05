@@ -1,12 +1,13 @@
 package chat.view;
 
 import javax.swing.JFrame;
+import chat.controller.ChatController;
 
 public class ChatFrame extends JFrame
 {
 
 	private ChatController app;
-	private ChapPanel appPanel;
+	private ChatPanel appPanel;
 	
 	public ChatFrame(ChatController app)
 	{
