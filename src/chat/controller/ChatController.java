@@ -5,26 +5,21 @@ import chat.model.Chatbot;
 
 public class ChatController
 {
-	
-	public void start()
-	{
-		String userText = "...";
-		while (!userText.equalsIgnoreCase("quit"))
-		{
-			userText = interactWithChatbot(userText);
-		}
-		
-		
-	}
-	
-	Chatbot simplebot = new Chatbot();
-	
 	private Chatbot simpleBot;
+	private ChatFrame appFrame;
 	
 	public ChatController()
 	{
 		simpleBot = new Chatbot();
+		appFrame = new ChatFrame(this);
 	}
+	
+	public void start()
+	{
+
+	}
+	
+	Chatbot simplebot = new Chatbot();
 	
 	public String interactWithChatbot(String text)
 	{

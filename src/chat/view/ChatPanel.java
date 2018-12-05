@@ -1,12 +1,15 @@
 package chat.view;
 
 import javax.swing.*;
-import chat.controller;
+import chat.controller.ChatController;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ChatPanel extends JPanel
 {
-
-	private ChatController app;
+	private ChatController appController;
 	private JTextField chatField;
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
@@ -20,7 +23,7 @@ public class ChatPanel extends JPanel
 	{
 		super();
 		
-		this.app = app;
+		this.appController = app;
 		appLayout = new SpringLayout();
 		
 		saveButton = new JButton("Save");
@@ -63,7 +66,21 @@ public class ChatPanel extends JPanel
 		this.add(chatField);
 	}
 	
-	
+	private void setupListeners()
+	{
+		chatButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String userText = chatField.getText();
+				String response = "";
+				response = appController.interactWithChatbot(userText);
+				chatArea.append(response);
+				chatArea.setCaretPosition(chatArea.getDocument().getLength());
+				chatField.setText("");
+			}
+		});
+	}
 	
 	
 	
